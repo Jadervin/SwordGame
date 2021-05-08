@@ -25,6 +25,7 @@ public class PlayerControllerAnimated : PlayerController
     public Animator animator;
     public float normalSpeed;
     public string isDeadTrigger;
+    public string isJumpTrigger;
 
     [Header("Controller Attributes")]
     Vector3 velo;
@@ -71,6 +72,7 @@ public class PlayerControllerAnimated : PlayerController
         {
             animator.enabled = false;
             //soundSource.PlayOneShot(JumpSound);
+            //animator.SetTrigger("IsJump");
             velo.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
 
