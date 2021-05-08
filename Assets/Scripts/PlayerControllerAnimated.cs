@@ -18,7 +18,7 @@ public class PlayerControllerAnimated : PlayerController
     bool isInvincibile = false;
     public float waitTime = 3;
     public GameObject hitEffect;
-    public GameObject playerExplosion;
+    //public GameObject playerExplosion;
     public GameObject playerModel;
 
     [Header("Animated Attributes")]
@@ -51,7 +51,7 @@ public class PlayerControllerAnimated : PlayerController
     {
         isGround = Physics.CheckSphere(GroundCheck.position, GroundDistance, groundMask);
 
-        if(isGround&&velo.y<0)
+        if(isGround && velo.y<0)
         {
             animator.enabled = true;
             velo.y = -2f;
@@ -101,7 +101,7 @@ public class PlayerControllerAnimated : PlayerController
             {
                 //GunMesh.GetComponent <MeshRenderer>().enabled = false;
                 Destroy(playerModel);
-                Instantiate(playerExplosion, this.transform.position, this.transform.rotation);
+                //Instantiate(playerExplosion, this.transform.position, this.transform.rotation);
                 //soundSource.PlayOneShot(DeathSound);
                 StartCoroutine(Wait(waitTime));
 
@@ -123,7 +123,7 @@ public class PlayerControllerAnimated : PlayerController
         if (other.gameObject.tag == ("End"))
         {
             Destroy(playerModel);
-            Instantiate(playerExplosion, this.transform.position, this.transform.rotation);
+            //Instantiate(playerExplosion, this.transform.position, this.transform.rotation);
             //soundSource.PlayOneShot(DeathSound);
             StartCoroutine(Wait(waitTime));
 
