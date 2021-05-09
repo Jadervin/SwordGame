@@ -548,6 +548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094853060}
   - component: {fileID: 1094853061}
+  - component: {fileID: 1094853062}
   m_Layer: 0
   m_Name: 'Enemy Parent '
   m_TagString: Untagged
@@ -562,14 +563,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094853059}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4978526, y: 1.2800393, z: 23.195988}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 2.4978526, y: 0.08, z: 23.195988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 574653868137934620}
+  - {fileID: 1103961965}
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1094853061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,14 +588,66 @@ MonoBehaviour:
   HP: 0
   hitSoundSource: {fileID: 0}
   hitSound: {fileID: 0}
-  pathfinding: {fileID: 0}
-  eyes: {fileID: 0}
-  visionRange: 0
+  pathfinding: {fileID: 1094853062}
+  eyes: {fileID: 1103961964}
+  visionRange: 10
   found: 0
   hurtTag: 
-  animator: {fileID: 0}
-  SlashTriggerName: 
+  animator: {fileID: 914868481459631527}
+  SlashTriggerName: IsSlash
   hitEffect: {fileID: 0}
+--- !u!195 &1094853062
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094853059}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.88
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.87
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!1 &1103961964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1103961965}
+  m_Layer: 0
+  m_Name: Eyes
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1103961965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103961964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.633, z: 0.485}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1094853060}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1600712673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,15 +1845,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914868481459631526}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.48876023, y: -1.2800393, z: -0.060482025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6762520702063908671}
   - {fileID: 5452106979338358664}
   m_Father: {fileID: 1094853060}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &577055260677615243
 Transform:
   m_ObjectHideFlags: 0
